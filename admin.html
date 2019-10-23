@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+        <link rel="stylesheet" href="./admin.css">
+    <title>Document</title>
+    <style>
+      
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #000000;
+}
+
+ .dashboard-container {
+	display: flex;
+}
+
+aside {
+	width: 200px;
+	height: 100vh;
+	background-color: #e9edfa;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	width: 100%;
+	margin: 20px 5px 10px 5px;
+}
+
+.main-content {
+	margin: 0px;
+}
+
+        a:hover{
+    	color: #ffffff;
+      display: block;
+      background-color: #213DCD;
+      text-decoration: none;
+}
+    aside a {
+    	color: #000000;
+}
+.main-ul li {
+	display: relative;
+	width: 103px;
+}
+
+ul {
+	list-style-type: none;
+	display: inline;
+}
+
+aside li:first-child {
+	margin-top: 70px;
+}
+
+aside li {
+	margin: 20px 10% 0px 8%;
+}
+
+      .active {
+      background: #213dcd;
+      padding: 4px 0px 4px 10px;
+}
+        .poli {
+            color: #213DCD;
+        }
+        .admin {
+            float: right;
+        }
+        .top {
+            margin-top: 100px;
+            padding-left: 10%;
+            
+        }
+        .active a {
+          color: #fff;
+          font-size: 1.1rem;
+}
+
+    a {
+      text-decoration: none;
+      color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/** CSS for boxes*/
+
+body {
+  line-height: 13px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+
+.bold {
+  font-weight: 700;
+}
+
+.blue-border {
+  border: 2px solid #3b447c;
+}
+
+.bordered {
+  border: 1px solid #ccc;
+}
+
+.ml--2 {
+  margin-left: -30px;
+}
+
+.recent-activity {
+  padding: 20px;
+  padding-top: 0;
+}
+
+.posts {
+  padding: 10px;
+}
+
+.posts__body {
+  display: flex;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.but {
+  display: inline-block;
+  align-self: flex-end;
+  width: 130px;
+  padding: 5px;
+  border: none;
+  background-color: #213dcd;
+  color: #fff;
+}
+
+.but.but-sm {
+  width: 100px;
+}
+
+.no-border {
+  border: none;
+  background-color: transparent;
+}
+
+.add-privileges-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30vh;
+}
+
+.blocked {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+}
+
+/** End of box CSS*/
+
+@media screen and (min-width: 768px) {
+	* {
+		font-size: 14px;
+	}
+	aside {
+		width: 35%;
+	}
+}
+
+/* 3.4 Images */
+
+.profile {
+	position: absolute;
+	top: 18px;
+	margin-left: 15px;
+	width: 20px;
+	height: 20px;
+}
+
+/* 3.5 Texts */
+
+h1,
+h2 {
+	font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+	/*****************
+	1. Global styling
+	*****************/
+
+	* {
+		font-size: 19px;
+	}
+
+	/*****************
+	2. Layout
+	*****************/
+
+	aside {
+		width: 20%;
+	}
+
+	main {
+		margin-left: 20px;
+	}
+
+	.main-ul li {
+		display: relative;
+		width: 200px;
+	}
+
+	.top-bar {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	
+    </style>
+  </head>
+
+  <body>
+    
+            <!--Start of side bar--->
+		<div class="dashboard-container">
+				<aside>
+					<ul class="aside-ul">
+						<li class="active"><a href="">Dashboard</a></li>
+						<li><a href="">Activities</a></li>
+						<li><a href="">Add Post +</a></li>
+						<li><a href="">Add Privileges</a></li>
+						<li><a href="">Block/Unblock</a></li>
+						<li><a href="">Logout</a></li>
+					</ul>
+			</aside>
+            
+            <!-- End of side bar--->
+            
+            <!--Left and right navs--->
+            
+            <main>
+				<nav>
+					<div class="logo">
+				<img
+              src="https://res.cloudinary.com/yvehogan/image/upload/v1571741975/Vector_6_xtinij.png"
+                alt="" 
+                <h1>Wiki<span class="poli">Poli</span></h1>
+					</div>
+
+            <ul class="main-ul">
+						<li>Hello, master Admin<img class="profile" src="https://res.cloudinary.com/yvehogan/image/upload/v1571741957/Vector_7_iqglhv.png"
+            alt="profile picture"></li>
+					</ul>
+				
+				</nav>
+            <!-- End of navs--->
+    
+    <!-- Start of container html-->
+    <div class="container">
+      <div class="row">
+        <h4>Dashboard</h4>
+      </div>
+
+      <div class="row">
+        <div class="recent-activity blue-border col mr-4">
+          <h3>Recent Activity Overview</h3>
+
+          <div class="posts bordered mb-3">
+            <div class="posts__body">
+              <div class="posts__1 mr-md-4">
+                <p class="bold">posted by: Olu214</p>
+                <p>Category: politician</p>
+              </div>
+              <div class="posts__2 ml-4">
+                <p>comments: 31</p>
+                <p>Date: 22/10/2109</p>
+              </div>
+            </div>
+            <div class="posts__footer">
+              <p>Topic: Fela Durotoye Biography</p>
+            </div>
+          </div>
+
+          <div class="posts bordered mt-3">
+            <div class="posts__body">
+              <div class="posts__1 mr-md-4">
+                <p class="bold">posted by: Olu214</p>
+                <p>Category: politician</p>
+              </div>
+              <div class="posts__2 ml-4">
+                <p>comments: 31</p>
+                <p>Date: 22/10/2109</p>
+              </div>
+            </div>
+            <div class="posts__footer">
+              <p>Topic: Fela Durotoye Biography</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="add-post blue-border col ml-4">
+          <h3>Add Post</h3>
+          <form class="form">
+            <input type="text" placeholder="Title" class="mb-3 p-2" />
+            <textarea
+              cols="30"
+              rows="11"
+              placeholder="Whats on your mind?"
+              class="mb-3 p-2"
+            ></textarea>
+            <button type="submit" class="but mb-3">Publish</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="add-privileges blue-border col-5">
+          <h3>Add Privileges</h3>
+          <div class="add-privileges-body">
+            <div>
+              <input
+                type="text"
+                size="35"
+                placeholder="Add New Admin"
+                class="pl-2 p-2"
+              /><button class="ml--2 no-border">+</button>
+            </div>
+            <div>
+              <input
+                type="text"
+                size="35"
+                placeholder="Grant User Admin Privilege"
+                class="pl-2 p-2"
+              /><button class="ml--2 no-border">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="blocked-users blue-border col ml-5">
+          <h3 class="mb-4">Blocked Users</h3>
+          <div class="blocked">
+            <div class="block shadow p-3 mb-4">
+              <span>1. Ada bright</span><span>ad@gmail.com</span
+              ><span><button class="but but-sm">unblock</button></span>
+            </div>
+            <div class="block shadow p-3 mb-4">
+              <span>2. Ada bright</span><span>ad@gmail.com</span
+              ><span><button class="but but-sm">unblock</button></span>
+            </div>
+            <div class="block shadow p-3">
+              <span>3. Ada bright</span><span>ad@gmail.com</span
+              ><span><button class="but but-sm">unblock</button></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+            <!-- End of container html--->
+  </body>
+</html>
